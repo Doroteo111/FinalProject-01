@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
-    public float speed = 25f;
-    public float horizontalInput, verticalInput;
 
+    public float speed = 20f;
+    public float turnSpeed = 10f;
+
+    private float horizontalInput, verticalInput;
+    
     private void Update()
     {
-        //detectar el movimiento del input
-        horizontalInput = Input.GetAxis("Horitzontal");
+       horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
 
-        transform.Translate(Vector3.forward * 20 * Time.deltaTime * verticalInput);
+        
+        transform.Translate(Vector3.forward * speed * Time.deltaTime *verticalInput);
+
+        transform.Translate(Vector3.right* turnSpeed * Time.deltaTime * horizontalInput);
 
     }
 }
