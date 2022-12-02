@@ -8,7 +8,7 @@ public class PlayerControl : MonoBehaviour
     public float speed = 20f;
     public float turnSpeed = 10f;
 
-    private float horizontalInput, verticalInput;
+    private float horizontalInput, verticalInput; //movment
     
     private void Update()
     {
@@ -20,5 +20,10 @@ public class PlayerControl : MonoBehaviour
 
         transform.Translate(Vector3.right* turnSpeed * Time.deltaTime * horizontalInput);
 
+
+
+
+        //hacer moneda o x (scrip del proyectil con el collaider)
+        //hacer que cuando cosilione con la bola, sume un punto
     }
 }
