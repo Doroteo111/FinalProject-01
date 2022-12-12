@@ -5,18 +5,10 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
 
-    public float speed = 20f;
-    public float turnSpeed = 50f; //speed
+    private float speed = 20f;
+    private float turnSpeed = 60f; //speed
 
     private float horizontalInput, verticalInput; //movment
-
-    /*private int points = 1; //couting coins collected
-    private int result;*/
-
-    /*private void Start()
-    {
-        Counter(points);  
-    }*/
 
     private void Update()
     {
@@ -33,20 +25,5 @@ public class PlayerControl : MonoBehaviour
             
     }
 
-    /*private void Counter(int x)
-    {
-        result = x++;
-        if (true)
-        {
-            Debug.Log($"You have collected {result} coins");
-        }
-    }*/
-
-    /*private void Victory()
-    {
-        if (result == 30)
-        {
-            Debug.Log("YOU WIN!!");
-        }
-    }*/
+    
 }
